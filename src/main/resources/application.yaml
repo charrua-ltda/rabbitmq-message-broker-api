@@ -1,0 +1,5 @@
+message-queuing:
+  queue: payment_queue
+  exchange: payment_exchange
+  routing-key: payment_routing_key
+
