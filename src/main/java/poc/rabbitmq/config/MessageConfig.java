@@ -22,7 +22,7 @@ public class MessageConfig {
     @Value("${message-queuing.exchange}")
     public String exchange;
 
-    @Value("${message-queuing.routing_key}")
+    @Value("${message-queuing.routing-key}")
     public String routingKey;
 
     @Bean

@@ -1,3 +1,7 @@
+server:
+  servlet:
+    context-path: /payment-api
+
 message-queuing:
   queue: payment_queue
   exchange: payment_exchange

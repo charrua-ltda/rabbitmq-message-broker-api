@@ -1,25 +1,24 @@
-package poc.rabbitmq.model;
+package poc.rabbitmq.controller.request;
+
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import poc.rabbitmq.enumeration.PaymentOption;
-import poc.rabbitmq.enumeration.PaymentStatus;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class Payment {
+public class PaymentRequest implements Serializable {
 
-    private String id;
+    private static final long serialVersionUID = 1L;
+
     private String description;
     private PaymentOption option;
     private BigDecimal price;
-    private Integer quantity;
-    private PaymentStatus status;
+    private int quantity;
 
 }
