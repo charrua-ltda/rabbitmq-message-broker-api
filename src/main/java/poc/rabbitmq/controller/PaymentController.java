@@ -1,34 +1,46 @@
 package poc.rabbitmq.controller;
 
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import poc.rabbitmq.controller.request.PaymentRequest;
+import poc.rabbitmq.enumeration.PaymentStatus;
+import poc.rabbitmq.model.Payment;
+import poc.rabbitmq.service.PaymentQueueService;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/payments")
 public class PaymentController {
 
-    private RabbitTemplate template;
+    private PaymentQueueService paymentQueueService;
 
-    @Autowired
-    public PaymentController(RabbitTemplate template) {
-        this.template = template;
+    public PaymentController(PaymentQueueService paymentQueueService) {
+        this.paymentQueueService = paymentQueueService;
     }
 
     @PostMapping
-    public ResponseEntity<Boolean> doPayment(@RequestBody PaymentRequest paymentRequest) {
-        System.out.println(paymentRequest);
+    public ResponseEntity<Boolean> schedulePayment(@RequestBody PaymentRequest paymentRequest) {
+        paymentQueueService.schedulePayment(createPayment(paymentRequest));
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(Boolean.TRUE);
+    }
+
+    private Payment createPayment(@RequestBody PaymentRequest paymentRequest) {
+        return Payment.builder().
+                id(UUID.randomUUID().toString())
+                .description(paymentRequest.getDescription())
+                .option(paymentRequest.getOption())
+                .price(paymentRequest.getPrice())
+                .quantity(paymentRequest.getQuantity())
+                .status(PaymentStatus.ACTIVE)
+                .build();
     }
 
 }
