@@ -1,7 +1,7 @@
 # rabbitmq-message-broker-api
 A Spring Boot API integrated with RabbitMQ message broker to deal with message objects.
 
-###Prerequisites
+### Prerequisites
 1. You must have RabbitMQ server installed in your local machine. See: https://www.rabbitmq.com/download.html
 2. It's extremely recommended use Postman to send HTTP requests for the API. See: https://www.postman.com
 
@@ -24,7 +24,7 @@ After doing the above steps:
 
 ###Result
 - After doing the above steps, the message will be in RabbitMQ and managed by it (waiting for consumers).
-- You can check it accessing the management and monitoring RabbitMQ interface: http://localhost:15672/ (the default username/password is "guest" for the both).
+- You can check it accessing the management and monitoring RabbitMQ interface: http://localhost:15672/ (the default username/password is <i>"guest"</i> for the both).
 - To access the management and monitoring interface, see these rules: https://www.rabbitmq.com/management.html
 
 
