@@ -1,5 +1,6 @@
 # rabbitmq-message-broker-api
-A Spring Boot API integrated with RabbitMQ message broker to deal with message objects.
+- A Spring Boot API integrated with RabbitMQ message broker to deal with message objects;
+- A quick/soft API that receive requests (fictional payment approach) and delegate it in message format to a RabbitMQ service.
 
 ### Prerequisites
 1. You must have RabbitMQ server installed in your local machine. See: https://www.rabbitmq.com/download.html
