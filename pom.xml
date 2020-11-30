@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>poc.rabbitmq</groupId>
-    <artifactId>rabbitmq</artifactId>
+    <artifactId>rabbitmq-message-broker-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rabbitmq-message-broker-api</name>
     <description>A Spring Boot API integrated with RabbitMQ message broker to deal with message objects</description>
