@@ -1,0 +1,30 @@
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request0.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request1.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request2.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request3.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request4.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request5.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request6.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request7.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request8.json
+POST http://127.0.0.1:8080/payment-api/api/v1/payments
+Content-Type: application/json
+@payloads/request9.json
