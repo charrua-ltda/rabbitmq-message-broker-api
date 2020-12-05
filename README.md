@@ -14,11 +14,7 @@
 $ git clone https://github.com/lucasmnunes/rabbitmq-message-broker-api.git
 $ docker-compose up  
 $ ./mvnw spring-boot:run
-$ 
 ```
-
-1. git clone
-2. In the root project directory, run ```mvn spring-boot:run``` to start the application;
 
 ### Using
 
@@ -33,8 +29,7 @@ $ curl -v --header "Content-Type: application/json" \
 
 ### Result
 
-- After doing the above steps, the message will be in RabbitMQ and managed by it (waiting for consumers).
-- You can check it accessing the management and monitoring RabbitMQ interface: http://localhost:15672/ (the default username/password is <i>"guest"</i> for the both).
-- To access the management and monitoring interface, see these rules: https://www.rabbitmq.com/management.html
-
+- After doing the steps above, the message should be in RabbitMQ it (waiting for consumers);
+- You can check it by accessing the management and monitoring RabbitMQ interface: http://localhost:15672/ (the default username/password is guest/guest);
+- To access the management/monitoring interface, check out the docs: https://www.rabbitmq.com/management.html.
 
