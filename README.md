@@ -12,8 +12,7 @@
 
 ```
 $ git clone https://github.com/lucasmnunes/rabbitmq-message-broker-api.git
-$ docker-compose up  
-$ ./mvnw spring-boot:run
+$ docker-compose up
 ```
 
 ### Using
