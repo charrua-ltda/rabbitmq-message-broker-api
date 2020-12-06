@@ -7,3 +7,6 @@ message-queuing:
   exchange: payment_exchange
   routing-key: payment_routing_key
 
+spring:
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:localhost}

@@ -1,6 +1,14 @@
 version: "3.7"
 
 services:
+  app:
+    image: ghcr.io/charrua-ltda/rabbitmq-message-broker-api:latest
+    environment:
+      RABBIT_MQ_HOST: rabbitmq
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
   rabbitmq:
     image: rabbitmq:management
     ports:
